@@ -1,0 +1,110 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainFragment">
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/statusBarView"
+            android:background="@drawable/nav_bar_bk"
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+        </View>
+
+        <!--导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/nav_bar_bk"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+
+            <com.hfut.studyhelper.RoundImageView
+                android:id="@+id/headImageMain"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:drawable="@drawable/normalheadimage" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="课表"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewPopMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!--主内容区-->
+            <com.hfut.studyhelper.QQViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!--Tab控件-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/tab_bar_bk_selector"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabSelectedTextColor="@android:color/holo_blue_light"
+            app:tabTextAppearance="@style/TabTitleAppearance"
+            app:tabTextColor="@android:color/black">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/booknormal"
+                android:text="课表"
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/daysnormal"
+                android:text="日程" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/datanormal"
+                android:text="数据" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+</FrameLayout>

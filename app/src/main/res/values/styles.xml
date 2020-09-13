@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.SplashActivity" parent="Theme.AppCompat.NoActionBar.FullScreen">
+        <item name="android:windowBackground">@color/whitr</item>
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="TabTitleAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <!-- 注意这两个属性一定要写，缺一不可，否则显示不出图片！ -->
+    </style>
+
+    <style name="popoMenuAnim" parent="android:Animation">
+        <!--<item name="android:windowEnterAnimation">@anim/popo_menu_show</item>-->
+        <item name="android:windowExitAnimation">@anim/popo_menu_hide</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="TransparentDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!--dialog样式的界面-->
+    <style name="dialog_style" parent="Theme.AppCompat.Light.Dialog">
+        <!--是否悬浮在activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--透明是否-->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@color/transparent</item>
+        <!--设置没有窗口标题、dialog标题等各种标题-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:title">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:dialogTitle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 半透明 -->
+
+        <!--设置圆角-->
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <!--点击 dialog Activity 周围是否关闭弹窗 true 关闭（默认为true） false 为不关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <!--dialog样式的界面-->
+    <style name="my_time_dialog_style" parent="Theme.AppCompat.Light.Dialog">
+        <!--是否悬浮在activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--透明是否-->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@color/transparent</item>
+        <!--设置没有窗口标题、dialog标题等各种标题-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:title">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:dialogTitle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 半透明 -->
+
+        <!--设置圆角-->
+        <item name="android:windowBackground">@drawable/bg_dialog_time</item>
+        <!--点击 dialog Activity 周围是否关闭弹窗 true 关闭（默认为true） false 为不关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Main" parent="MyAppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <!--dialog样式的界面-->
+    <style name="my_dialog_style" parent="Theme.AppCompat.Light.Dialog">
+        <!--是否悬浮在activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--透明是否-->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@color/transparent</item>
+        <!--设置没有窗口标题、dialog标题等各种标题-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:title">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:dialogTitle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 半透明 -->
+
+        <!--设置圆角-->
+        <item name="android:windowBackground">@drawable/bg_dialog_date</item>
+        <!--点击 dialog Activity 周围是否关闭弹窗 true 关闭（默认为true） false 为不关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="labels_style">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_enter_bottom</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/anim_exit_bottom</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <declare-styleable name="CountDownProgressBar">
+        <attr name="countDown_circleWidth" format="dimension" />
+        <attr name="countDown_centerTextSize" format="dimension" />
+        <attr name="countDown_betaAngle" format="integer" />
+        <attr name="countDown_firstColor" format="color" />
+        <attr name="countDown_secondColor" format="color" />
+        <attr name="countDown_centerTextColor" format="color" />
+        <attr name="countDown_isShowGradient" format="boolean" />
+    </declare-styleable>
+</resources>

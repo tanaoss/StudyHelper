@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/bk1"
+    tools:context=".LoginFragment">
+
+
+    <com.hfut.studyhelper.RoundImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:drawable="@drawable/normalheadimage"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+
+    <EditText
+        android:id="@+id/editTextNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="32dp"
+        android:alpha="0.8"
+        android:background="@drawable/edit_bk_selector"
+        android:ems="10"
+        android:hint="请输入账号"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/editTextNum"
+        app:layout_constraintRight_toRightOf="@id/editTextNum"
+        app:layout_constraintTop_toBottomOf="@id/editTextNum"
+        app:layout_constraintHorizontal_bias="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutContext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextPass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:alpha="0.8"
+                android:background="@drawable/edit_bk_selector"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/eye"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/eye"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:src="@drawable/eye_close"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextPass" />
+
+            <Button
+                android:id="@+id/LoginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape"
+                android:fontFamily="casual"
+                android:text="登\t录"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextPass"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+            <TextView
+                android:id="@+id/textViewRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/LoginButton"
+                app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/LoginButton"
+                app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  欢迎光临我的开心"
+                    android:textColor="#E9F7C8A0" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ScoreActivity">
+    <View
+        android:id="@+id/statusBarView"
+        android:background="@drawable/nav_bar_bk"
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+    </View>
+
+    <!--导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/nav_bar_bk"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.hfut.studyhelper.RoundImageView
+            android:id="@+id/headImageMain"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:drawable="@drawable/normalheadimage" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="成绩"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/textViewPopMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/card_style">
+
+        <TextView
+            android:id="@+id/totalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="总均分：87.3"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="总排名：22"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#99CCCCCC"
+        app:layout_constraintTop_toBottomOf="@+id/textCourse" />
+    <ExpandableListView
+        android:id="@+id/expandablelistview"
+        android:layout_margin="5dp"
+        android:groupIndicator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
